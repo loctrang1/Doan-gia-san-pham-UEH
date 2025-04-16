@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('https://bit.ueh.edu.vn/wp-content/uploads/2023/06/ueh-new-campus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Màu trắng mờ 70% */
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Căn giữa tiêu đề */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #F37321;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+/* Container các ô input */
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Các input (Tên người chơi) */
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #007C8A;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* Nút bắt đầu chơi */
+button {
+  margin-top: 20px;
+  background-color: #007C8A;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f66;
+  transform: scale(1.05);
+}
+
+/* Các input đoán giá */
+input[type="number"] {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #007C8A;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Bảng xếp hạng */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px solid #007C8A;
+}
+
+ul li span {
+  font-weight: bold;
+}
+
+ul li span:first-child {
+  color: #007C8A;
+}
+
+ul li span:last-child {
+  color: #F37321;
+}
